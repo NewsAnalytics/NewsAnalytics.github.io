@@ -3,7 +3,7 @@
 "website": "https://www.bsee.gov/"
 "rss": "https://www.bsee.gov/feed/news-items/rss.xml"
 "embedded": "0"
-"etag": ""1631501542-0""
-"last_modified": "Mon, 13 Sep 2021 02:52:22 GMT"
-"last_poll": "2021-09-13 03:32:12.881683"
+"etag": ""1631505143-0""
+"last_modified": "Mon, 13 Sep 2021 03:52:23 GMT"
+"last_poll": "2021-09-13 04:02:13.031840"
 ---
