@@ -1,0 +1,101 @@
+---
+layout: default
+title: News Analytics
+---
+{% include navigation.html %}
+{% include description.html %}
+<br>  
+<br>
+<p><center>Estimated number of news related to accidents in the last two weeks</center></p>
+<div id="counter_news"></div>
+<br>  
+<br>
+<p><center>Estimated number of <span style="color: red;"><b>deads</b></span> related to accidents in the last two weeks</center></p>
+<div id="counter_deads"></div>
+<br>  
+<br>
+<p><center>Estimated number of <span style="color: red;"><b>injuries</b></span> related to accidents in the last two weeks</center></p>
+<div id="counter_injuries"></div>
+
+<script>
+var news = [
+{% for post in site.posts %}
+  {% if post.accident == "1" %}
+  {
+   "date":  "{{ post.date | date: "%Y-%m-%d" }}",
+   "dead":  {{ post.dead }},  
+   "injured":  {{ post.injured }},  
+  },
+  {% endif %}
+{% endfor %}
+];
+
+var counts = {};
+var deads = {};
+var injureds = {};
+
+ for (var i = 0; i < news.length; i++) {
+    counts[news[i]["date"]]   = 1 + (counts[news[i]["date"]] || 0);
+    deads[news[i]["date"]]    = news[i]["dead"] + (deads[news[i]["date"]] || 0);
+    injureds[news[i]["date"]] = news[i]["injured"] + (injureds[news[i]["date"]] || 0);
+}
+
+
+function create_graph(data, div_id) {
+  var x = [];
+  var y = [];
+  for(var key in data) {
+    y.push(data[key]);
+    x.push(key);
+  } 
+
+  var dates = x.map(function (e) { return(new Date(e)); });  
+  var maxDate = new Date(Math.max.apply(null,dates));
+  var minDate = new Date();
+  minDate.setTime(maxDate.getTime() - (24*60*60*1000) * 14);
+  maxDate.setTime(maxDate.getTime() + (24*60*60*1000) * 1); //Show one day ahead
+
+  maxDate = maxDate.getUTCFullYear().toString() + "-" + (maxDate.getUTCMonth()+1).toString() + "-" + maxDate.getUTCDate().toString();
+  minDate = minDate.getUTCFullYear().toString() + "-" + (minDate.getUTCMonth()+1).toString() + "-" + minDate.getUTCDate().toString();
+  
+  var trace = {
+    x: x,
+    y: y,
+    type: "scatter",
+    mode: "markers",
+    marker: { size: 12 }
+  };
+  var data = [trace];
+
+  var layout = {
+    xaxis: {
+      range: [minDate, maxDate],
+      type: "date",
+      fixedrange: true
+    },
+    yaxis: {
+      fixedrange: true
+    }
+  };  
+  var config = {responsive: true};
+
+  Plotly.newPlot(div_id, data, layout, config);
+}
+ 
+ 
+create_graph(counts, "counter_news");
+create_graph(deads, "counter_deads");
+create_graph(injureds, "counter_injuries");
+ 
+</script>
+
+
+
+<h2>Sources</h2>
+
+{% for author in site.authors %}
+<h3><a href="{{ author.website }}">{{ author.name }}</a></h3>
+<p>Last update: <b>{{ author.last_poll | date_to_long_string  }}</b>  {{ author.last_poll | date: "%k:%M" }}</p>
+{% endfor %}
+
+<h3><a href='https://github.com/NewsAnalytics/NewsAnalytics.github.io'>Repository</a></h3>

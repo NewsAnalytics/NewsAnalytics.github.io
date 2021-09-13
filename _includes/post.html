@@ -1,0 +1,42 @@
+  <h3 id="{{ post.file }}">
+     {% if post.accident == "1" %}
+      [WARNING]
+     {% endif %}
+     <a href="{{ post.link }}">
+      {{ post.title }}
+     </a>
+  </h3>
+
+  <p class="author">
+    <span class="date">when: <b>{{ post.date | date_to_long_string  }}</b>  {{ post.date | date: "%k:%M" }}</span>
+  </p>
+  <p class="author">
+    <span>source: <a href="{{ post.feed_website }}">{{ post.feed_name }}</a> </span>
+  </p>
+  
+
+
+  {% if post.accident == "1" and post.dead and post.dead != "" post.dead != nil %}
+    <p class="author">
+      {% if post.dead != "0" %} 
+        <span style="color: red;">dead: <b>{{ post.dead }}</b></span>
+      {% else %}
+        <span>dead: <b>n.d.</b></span>
+      {% endif %}
+    </p>
+  {% endif %}
+  
+  {% if post.accident == "1" and post.injured and post.injured != "" post.injured != nil %}
+    <p class="author">
+      {% if post.injured != "0" %} 
+        <span style="color: red;">injured: <b>{{ post.injured }}</b></span>
+      {% else %}
+        <span>injured: <b>n.d.</b></span>
+      {% endif %}
+    </p>
+  {% endif %}
+
+
+  <div class="content">
+    {{ post.content }}
+  </div>

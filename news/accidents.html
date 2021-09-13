@@ -1,0 +1,17 @@
+---
+layout: default
+title: News Analytics
+---
+{% include navigation.html %}
+ 
+<!-- This loops through the paginated posts -->
+{% for post in site.posts %}
+   
+{% if post.accident == "1" %}
+
+{% include post.html %}
+
+{% endif %}
+{% endfor %}
+
+</div>

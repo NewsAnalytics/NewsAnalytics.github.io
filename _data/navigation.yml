@@ -1,0 +1,8 @@
+- name: Home
+  link: /
+
+- name: All News
+  link: /news/
+ 
+- name: Only Accidents
+  link: /news/accidents.html

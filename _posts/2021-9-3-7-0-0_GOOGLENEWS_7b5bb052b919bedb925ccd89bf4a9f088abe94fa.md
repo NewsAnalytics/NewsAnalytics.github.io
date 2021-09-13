@@ -1,0 +1,13 @@
+---
+"title": "Noble Globetrotter II crew being evacuated after Hurricane Ida - Houston Business Journal - Houston Business Journal"
+"date": "2021-9-3 7:0:0"
+"feed_name": "GOOGLENEWS"
+"feed_website": "https://news.google.com/search?q=drilling%2Bincident&hl=en-US&gl=US&ceid=US:en"
+"feed_rss": "https://news.google.com/rss/search?q=drilling%2Bincident&hl=en-US&gl=US&ceid=US:en"
+"link": "https://www.bizjournals.com/houston/news/2021/09/03/noble-globetrotter-ii-damage.html"
+"file": "_posts/2021-9-3-7-0-0_GOOGLENEWS_7b5bb052b919bedb925ccd89bf4a9f088abe94fa.md"
+"accident": "0"
+"drilling": "0"
+"dead": "0"
+"injured": "0"
+---
