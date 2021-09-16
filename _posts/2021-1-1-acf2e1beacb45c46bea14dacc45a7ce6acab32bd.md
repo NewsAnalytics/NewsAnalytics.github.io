@@ -8,6 +8,4 @@
 "file": "_posts/2021-1-1-acf2e1beacb45c46bea14dacc45a7ce6acab32bd.md"
 "accident": "0"
 "drilling": "0"
-"dead": "0"
-"injured": "0"
 ---
