@@ -4,11 +4,12 @@ plugins:
 title: News Analytics
 google_analytics: G-94DYDBLPCL
 
+start_date: 2017-10-09T00:00:00
+
 paginate: 30
 paginate_path: "/news/page:num/"
 collections:
   authors:
 
-start_date: 2017-10-09T00:00:00
 exclude: "/news/index.html"
 
