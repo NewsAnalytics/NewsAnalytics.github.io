@@ -4,9 +4,9 @@ title: News Analytics
 ---
 {% include navigation.html %}
 {% include description.html %}
-
+{{ site.start_date }}
 {% for post in site.posts %}
-  {% if post.date > 2017-10-09T00:00:00 %}
+  {% if post.date > site.start_date %}
     {{ post.date | date: "%Y-%m-%d" }}
   {% else %}
     {{ post.date }}
