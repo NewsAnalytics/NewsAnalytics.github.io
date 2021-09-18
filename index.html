@@ -7,8 +7,6 @@ title: News Analytics
 {% for post in site.posts %}
   {% assign start_date = site.data.dates.start_date  %}
   {% if post.date > start_date %}
-    {{ post.date | date: "%Y-%m-%d" }}
-    <br>
   {% endif %}
 {% endfor %}
 <br>  
