@@ -19,7 +19,8 @@ title: News Analytics
 
 
 {% for post in site.posts %}
-  {% if post.date >=  2021-09-10 %}
+  ok
+  {% if post.date >  2021-09-10 %}
     {{ post.date | date: "%Y-%m-%d" }}
   {% endif %}
 {% endfor %}
