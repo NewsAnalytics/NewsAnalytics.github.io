@@ -4,6 +4,14 @@ title: News Analytics
 ---
 {% include navigation.html %}
 {% include description.html %}
+
+{% for post in site.posts %}
+  ok
+  {% if post.date >  '2021-09-10' %}
+    {{ post.date | date: "%Y-%m-%d" }}
+  {% endif %}
+{% endfor %}
+
 <br>  
 <br>
 <p><center>Estimated number of news related to accidents in the last two weeks</center></p>
@@ -18,12 +26,7 @@ title: News Analytics
 <div id="counter_injuries"></div>
 
 
-{% for post in site.posts %}
-  ok
-  {% if post.date >  2021-09-10 %}
-    {{ post.date | date: "%Y-%m-%d" }}
-  {% endif %}
-{% endfor %}
+
 
 <script>
 var news = [
