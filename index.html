@@ -6,14 +6,8 @@ title: News Analytics
 {% include description.html %}
 
 
-{% for post in site.posts %}
-  {% if post.date > site.start_date %}
-    {{ post.date | date: "%Y-%m-%d" }}
-  {% else %}
-    {{ post.date }}
-  {% endif %}
-{% endfor %}
 
+{{ site.start_date }}
 
 <br>  
 <br>
