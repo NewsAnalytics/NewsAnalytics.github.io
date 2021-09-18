@@ -5,8 +5,8 @@ title: News Analytics
 {% include navigation.html %}
 {% include description.html %}
 
-
-{{ assign start_date = site.start_date }}
+{{ site.data.dates.start_date }}
+{{ assign start_date = site.data.dates.start_date }}
 ciao: {{ start_date }}
 <br>
 {% for post in site.posts %}
