@@ -17,6 +17,10 @@ title: News Analytics
 <p><center>Estimated number of <span style="color: red;"><b>injuries</b></span> related to accidents in the last two weeks</center></p>
 <div id="counter_injuries"></div>
 
+{% for post in site.posts %}
+{{ post.date | date: "%Y" }}, {{ post.date | date: "%m" }}, {{ post.date | date: "%d" }}
+{% endfor %}
+
 <script>
 var news = [
 {% for post in site.posts %}
