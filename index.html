@@ -4,19 +4,13 @@ title: News Analytics
 ---
 {% include navigation.html %}
 {% include description.html %}
-
-<br>
 {% for post in site.posts %}
   {% assign start_date = site.data.dates.start_date  %}
   {% if post.date > start_date %}
     {{ post.date | date: "%Y-%m-%d" }}
-  {% else %}
-    {{ post.date }}
+    <br>
   {% endif %}
 {% endfor %}
-
-
-
 <br>  
 <br>
 <p><center>Estimated number of news related to accidents in the last two weeks</center></p>
