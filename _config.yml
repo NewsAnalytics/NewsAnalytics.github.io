@@ -8,4 +8,7 @@ google_analytics: G-94DYDBLPCL
 #paginate_path: "/news/page:num/"
 collections:
   authors:
+
+
+exclude: "/news/index.html"
   
