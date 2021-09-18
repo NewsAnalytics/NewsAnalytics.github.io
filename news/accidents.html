@@ -6,12 +6,10 @@ title: News Analytics
  
 <!-- This loops through the paginated posts -->
 {% for post in site.posts %}
-   
-{% if post.accident == "1" %}
-
-{% include post.html %}
-
-{% endif %}
+  {% assign start_date = site.data.dates.start_date %}
+  {% if post.accident == "1" and post.date > start_date %}
+     {% include post.html %}
+  {% endif %}
 {% endfor %}
 
 </div>
