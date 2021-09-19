@@ -99,8 +99,8 @@ create_graph(injureds, "counter_injuries");
 
 {% for author in site.authors %}
 <h3><a href="{{ author.website }}">{{ author.name }}</a></h3>
-<p>Last update: <b>{{ author.last_poll | date_to_long_string  }}</b>  {{ author.last_poll | date: "%k:%M" }}</p>
-<p>Last update: <b><span class="date_string">{{ author.last_poll | date_to_xmlschema  }}</span></b></p>
+<!-- <p>Last update: <b>{{ author.last_poll | date_to_long_string  }}</b>  {{ author.last_poll | date: "%k:%M" }}</p> -->
+<p>Last update: <span class="date_string">{{ author.last_poll | date_to_xmlschema  }}</span></p>
 {% endfor %}
 
 <script>
