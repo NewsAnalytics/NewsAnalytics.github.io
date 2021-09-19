@@ -101,6 +101,12 @@ create_graph(injureds, "counter_injuries");
 {% for author in site.authors %}
 <h3><a href="{{ author.website }}">{{ author.name }}</a></h3>
 <p>Last update: <b>{{ author.last_poll | date_to_long_string  }}</b>  {{ author.last_poll | date: "%k:%M" }}</p>
+<script>
+  var d = new Date('19 September 2021 10:18');
+  document.write(d.toTimeString());
+</script>
 {% endfor %}
+
+
 
 <h3><a href='https://github.com/NewsAnalytics/NewsAnalytics.github.io'>Repository</a></h3>
