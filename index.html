@@ -107,7 +107,8 @@ create_graph(injureds, "counter_injuries");
   var x = document.getElementsByClassName("date_string");
   for (var i = 0; i < x.length; i++) {
     var d = new Date(x[i].innerHTML);
-    x[i].innerHTML = "<b>"d.getFullYear().toString() + "-" + (d.getMonth()+1).toString() + "-" + d.getDate().toString()+"</b>"
+    x[i].innerHTML = "<b>" + d.getFullYear().toString() + "-" + (d.getMonth()+1).toString() + "-" + d.getDate().toString()+"</b>";
+    x[i].innerHTML = x[i].innerHTML + " " + d.getHours().toString() + ":" +  d.getMinutes().toString();
   }
 
   
