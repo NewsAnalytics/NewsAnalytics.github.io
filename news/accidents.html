@@ -3,7 +3,8 @@ layout: default
 title: News Analytics
 ---
 {% include navigation.html %}
- 
+{% include limits.html %}
+
 <!-- This loops through the paginated posts -->
 {% for post in site.posts %}
   {% assign start_date = site.data.dates.start_date %}
