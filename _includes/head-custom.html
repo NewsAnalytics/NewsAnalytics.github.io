@@ -2,3 +2,13 @@
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
 <script src="https://cdn.plot.ly/plotly-2.3.1.min.js"></script>
+<script>
+  function date_converter() {
+    var x = document.getElementsByClassName("date_string");
+    for (var i = 0; i < x.length; i++) {
+      var d = new Date(x[i].innerHTML);
+      x[i].innerHTML = "<b>" + d.getFullYear().toString() + "-" + (d.getMonth()+1).toString() + "-" + d.getDate().toString()+"</b>";
+      x[i].innerHTML = x[i].innerHTML + " " + d.getHours().toString() + ":" +  d.getMinutes().toString();
+    }
+  }
+</script>
