@@ -4,5 +4,5 @@
 #- name: All News
 #  link: /news/
  
-- name: Safety News
+- name: News
   link: /news/accidents.html
