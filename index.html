@@ -102,7 +102,7 @@ create_graph(injureds, "counter_injuries");
 <h3><a href="{{ author.website }}">{{ author.name }}</a></h3>
 <p>Last update: <b>{{ author.last_poll | date_to_long_string  }}</b>  {{ author.last_poll | date: "%k:%M" }}</p>
 <script>
-  var d = new Date('{{ author.last_poll | date_to_xmlschema }}');
+  var d = new Date("{{ author.last_poll | date_to_xmlschema }}");
   document.write(d.toTimeString());
 </script>
 {% endfor %}
