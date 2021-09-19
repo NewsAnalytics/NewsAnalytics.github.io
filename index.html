@@ -103,15 +103,5 @@ create_graph(injureds, "counter_injuries");
 <p>Last update: <span class="date_string">{{ author.last_poll | date_to_xmlschema  }}</span></p>
 {% endfor %}
 
-<script>
-  var x = document.getElementsByClassName("date_string");
-  for (var i = 0; i < x.length; i++) {
-    var d = new Date(x[i].innerHTML);
-    x[i].innerHTML = "<b>" + d.getFullYear().toString() + "-" + (d.getMonth()+1).toString() + "-" + d.getDate().toString()+"</b>";
-    x[i].innerHTML = x[i].innerHTML + " " + d.getHours().toString() + ":" +  d.getMinutes().toString();
-  }
-
-  
-</script>
 
 <h3><a href='https://github.com/NewsAnalytics/NewsAnalytics.github.io'>Repository</a></h3>
