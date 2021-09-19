@@ -7,7 +7,9 @@ title: News Analytics
 <!-- This loops through the paginated posts -->
 {% for post in site.posts %}
   {% assign start_date = site.data.dates.start_date %}
-  {% if post.accident == "1" and post.date > start_date %}
+  {% assign last_days = site.time | date: "%s" | minus : 1209600 | date: "%Y-%m-%d" %}
+  
+  {% if post.accident == "1" and post.date > start_date and post.date > last_days %}
      {% include post.html %}
   {% endif %}
 {% endfor %}
