@@ -5,7 +5,8 @@ title: News Analytics
 {% include navigation.html %}
 {% include description.html %}
 
-{{ site.time | date: "%s" | minus : 604800 | date: "%Y-%m-%d" }}
+{% assign last_days = site.time | date: "%s" | minus : 1209600 | date: "%Y-%m-%d" %}
+last_days: {{ last_days }} # 1209600 == 14 days
 <br>
 
 
@@ -31,11 +32,11 @@ var news = [
 {% for post in site.posts %}
   {% assign start_date = site.data.dates.start_date %}
   {% if post.accident == "1" and post.date > start_date %}
-  {
-   "date":  "{{ post.date | date: "%Y-%m-%d" }}",
-   "dead":  {{ post.dead }},  
-   "injured":  {{ post.injured }},  
-  },
+    {
+     "date":  "{{ post.date | date: "%Y-%m-%d" }}",
+     "dead":  {{ post.dead }},  
+     "injured":  {{ post.injured }},  
+    },
   {% endif %}
 {% endfor %}
 ];
