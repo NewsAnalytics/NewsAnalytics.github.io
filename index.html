@@ -5,7 +5,7 @@ title: News Analytics
 {% include navigation.html %}
 {% include description.html %}
 
-{{'now' | date: "%s" | minus : 604800 | date: "%b %d, %Y %I:%M %p -0500" }}
+{{ site.time | date: "%s" | minus : 604800 | date: "%Y-%m-%d" }}
 <br>
 
 
