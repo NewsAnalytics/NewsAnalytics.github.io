@@ -7,14 +7,12 @@ title: News Analytics
 <!-- This loops through the paginated posts -->
 {% for post in site.posts %}
   {% assign start_date = site.data.dates.start_date %}
-  
-  
+  {% assign last_days_s = site.data.dates.last_days_s %}
   {% capture post_date_s %}{{ post.date | date: "%s" }}{% endcapture %}
-  {% capture weaks_ago_s %}{{ site.time | date: "%s" | minus : 604800 }}{% endcapture %}
+  {% capture min_date_s %}{{ site.time | date: "%s" | minus : last_days_s }}{% endcapture %}
+  
 
-  ok {{ weaks_ago_s }} --- {{ post_date_s }} --- {{ site.time }}
-  <br>
-  {% if post.accident == "1" and post.date > start_date and post_date_s > weaks_ago_s %}
+  {% if post.accident == "1" and post.date > start_date and post_date_s > min_date_s %}
      {% include post.html %}
   {% endif %}
 {% endfor %}
