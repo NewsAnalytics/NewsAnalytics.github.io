@@ -4,13 +4,6 @@ title: News Analytics
 ---
 {% include navigation.html %}
 {% include description.html %}
-
-{% assign last_days = site.time | date: "%s" | minus : 1209600 | date: "%Y-%m-%d" %}
-last_days: {{ last_days }} # 1209600 == 14 days
-<br>
-
-
-
 <br>  
 <br>
 <p><center>Estimated number of news related to accidents in the last two weeks</center></p>
@@ -23,15 +16,16 @@ last_days: {{ last_days }} # 1209600 == 14 days
 <br>
 <p><center>Estimated number of <span style="color: red;"><b>injuries</b></span> related to accidents in the last two weeks</center></p>
 <div id="counter_injuries"></div>
-
-
-
-
 <script>
 var news = [
 {% for post in site.posts %}
+  
   {% assign start_date = site.data.dates.start_date %}
-  {% if post.accident == "1" and post.date > start_date %}
+  {% assign last_days_s = site.data.dates.last_days_s %}
+  {% capture post_date_s %}{{ post.date | date: "%s" }}{% endcapture %}
+  {% capture min_date_s %}{{ site.time | date: "%s" | minus : last_days_s }}{% endcapture %}
+  
+  {% if post.accident == "1" and post.date > start_date and post_date_s > min_date_s %}
     {
      "date":  "{{ post.date | date: "%Y-%m-%d" }}",
      "dead":  {{ post.dead }},  
