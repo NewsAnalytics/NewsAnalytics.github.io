@@ -12,7 +12,8 @@ title: News Analytics
   {% capture post_date_s %}{{ post.date | date: "%s" }}{% endcapture %}
   {% capture weaks_ago_s %}{{ site.time | date: "%s" | minus : 1209600 }}{% endcapture %}
 
-  ok {{ weaks_ago_s }}
+  ok {{ weaks_ago_s }} --- {{ post_date_s }}
+  <br>
   {% if post.accident == "1" and post.date > start_date and post_date_s > weaks_ago_s %}
      {% include post.html %}
   {% endif %}
