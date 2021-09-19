@@ -95,18 +95,21 @@ create_graph(injureds, "counter_injuries");
 </script>
 
 
-
 <h2>Sources</h2>
 
 {% for author in site.authors %}
 <h3><a href="{{ author.website }}">{{ author.name }}</a></h3>
 <p>Last update: <b>{{ author.last_poll | date_to_long_string  }}</b>  {{ author.last_poll | date: "%k:%M" }}</p>
-<script>
-  var d = new Date("{{ author.last_poll | date_to_xmlschema }}");
-  document.write(d.toString());
-</script>
+<p>Last update: <b><span class="date_string">{{ author.last_poll | date_to_xmlschema  }}</span></b></p>
 {% endfor %}
 
+<script>
+  var x = document.getElementsByClassName("date_string");
+  for (var i = 0; i < x.length; i++) {
+    var d = new Date(x[i].innerHTML);
+    x[i].innerHTML = d.toString();
+  }
 
+</script>
 
 <h3><a href='https://github.com/NewsAnalytics/NewsAnalytics.github.io'>Repository</a></h3>
