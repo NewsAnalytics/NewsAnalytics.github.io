@@ -6,6 +6,9 @@ title: News Analytics
 {% capture length_total %}{{ site.posts | size }}{% endcapture %}
 {% capture length_accidents %}{{ site.posts | where_exp:"post", 'post.accident == "1"' | size }}{% endcapture %}
 
+Number of news: {{ length_total }} <br>
+
+
 If no injuries or deaths happened or the number of injuries or deaths is not specified or unclear the system will report <b>n.d.</b><br>
 <!-- This loops through the paginated posts -->
 {% for post in site.posts %}
