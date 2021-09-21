@@ -5,7 +5,7 @@ title: News Analytics
 {% include navigation.html %}
 {% capture length_total %}{{ site.posts | size }}{% endcapture %}
 {% capture length_accidents %}{{ site.posts | where_exp:"post", 'post.accident == "1"' | size }}{% endcapture %}
-{% capture perc_accidents %}{{ length_accidents | divided_by: length_total | times 100 | round: 2 }}{% endcapture %}
+{% capture perc_accidents %}{{ length_accidents | divided_by: length_total | times: 100 | round: 2 }}{% endcapture %}
 
 Number of news: {{ length_total }} <br>
 Number of pre-selected news: {{ length_accidents }}, {{ perc_accidents }} <br><br>
