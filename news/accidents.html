@@ -4,7 +4,7 @@ title: News Analytics
 ---
 {% include navigation.html %}
 Number of news: {{ site.posts | size }} <br>
-Number of filtered news: {{ site.posts | where_exp:"post", 'post.accident == "1"' | size }}
+Number of filtered news: {{ site.posts | where_exp:"post", 'post.accident == "1"' | size }}<br>
 
 If no injuries or deaths happened or the number of injuries or deaths is not specified or unclear the system will report <b>n.d.</b><br>
 
