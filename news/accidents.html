@@ -8,7 +8,7 @@ title: News Analytics
 {% capture perc_accidents %}{{ length_accidents | divided_by: length_total | times: 100 | round: 2 }}{% endcapture %}
 
 Number of news: {{ length_total }} <br>
-Number of pre-selected news: {{ length_accidents }}, {{ perc_accidents }} <br><br>
+Number of pre-selected news: {{ length_accidents }}({{ perc_accidents }}%)<br><br>
 
 If no injuries or deaths happened or the number of injuries or deaths is not specified or unclear the system will report <b>n.d.</b><br>
 <!-- This loops through the paginated posts -->
