@@ -4,8 +4,10 @@ title: News Analytics
 ---
 {% include navigation.html %}
 
-{{ assign length_total = site.posts | size }} 
-{{ assign length_accidents = site.posts | where_exp:"post", 'post.accident == "1"' | size }} 
+
+{% capture length_total %}{{ site.posts | size }}{% endcapture %}
+{% capture length_accidents %}{{ site.posts | where_exp:"post", 'post.accident == "1"' | size }}{% endcapture %}
+
 Number of news: {{ length_total }} <br>
 Number of filtered news: {{ length_accidents }}<br>
 
