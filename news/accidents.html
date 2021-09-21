@@ -3,8 +3,13 @@ layout: default
 title: News Analytics
 ---
 {% include navigation.html %}
-Number of news: {{ site.posts | size }} <br>
-Number of filtered news: {{ site.posts | where_exp:"post", 'post.accident == "1"' | size }}<br>
+
+{{ assign length_total = site.posts | size }} 
+{{ assign length_accidents site.posts | where_exp:"post", 'post.accident == "1"' | size }} 
+Number of news: {{ length_total }} <br>
+Number of filtered news: {{ length_accidents }}<br>
+
+{{ 16 | divided_by: 4 }}
 
 If no injuries or deaths happened or the number of injuries or deaths is not specified or unclear the system will report <b>n.d.</b><br>
 
