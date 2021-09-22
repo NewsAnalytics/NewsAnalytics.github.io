@@ -37,6 +37,16 @@
     </p>
   {% endif %}
 
+  {% if post.accident == "1" and post.where and post.where != "" post.where != nil %}
+    <p class="author">
+      {% if post.where != "unknown site" %} 
+        <span style="color: red;">where: <b>{{ post.where }}</b></span>
+      {% else %}
+        <span>where: <b>n.d.</b></span>
+      {% endif %}
+    </p>
+  {% endif %}
+
 
   <div class="content">
     {{ post.content }}
