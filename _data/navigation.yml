@@ -6,3 +6,6 @@
  
 - name: News
   link: /news/accidents.html
+
+- name: About
+  link: /about/
