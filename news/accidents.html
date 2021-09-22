@@ -7,10 +7,11 @@ title: News Analytics
 {% capture length_accidents %}{{ site.posts | where_exp:"post", 'post.accident == "1"' | size }}{% endcapture %}
 {% capture perc_accidents %}{{ length_accidents | times: 1.0 | divided_by: length_total | times: 100 | round: 2 }}{% endcapture %}
 
-Number of news: {{ length_total }} <br>
-Number of pre-selected news: {{ length_accidents }}({{ perc_accidents }}%)<br><br>
-If no injuries or deaths happened or the number of injuries or deaths is not specified or unclear the system will report <b>n.d.</b><br>
-For all the news that have a number of injuries or deaths different from <b>n.d.</b>, the type of the site where the accident happened will be reported (construction, industrial and mining site).<br>
+<p><center>Number of news: {{ length_total }}</center></p>
+<p><center>Number of pre-selected news: {{ length_accidents }}({{ perc_accidents }}%)</center></p>
+<br>
+<p><center>If no injuries or deaths happened or the number of injuries or deaths is not specified or unclear the system will report <b>n.d.</b></center></p>
+<p><center>For all the news that have a number of injuries or deaths different from <b>n.d.</b>, the type of the site where the accident happened will be reported (construction, industrial and mining site).</center></p>
 <!-- This loops through the paginated posts -->
 {% for post in site.posts %}
   {% assign start_date = site.data.dates.start_date %}
