@@ -9,8 +9,8 @@ title: News Analytics
 
 Number of news: {{ length_total }} <br>
 Number of pre-selected news: {{ length_accidents }}({{ perc_accidents }}%)<br><br>
-
 If no injuries or deaths happened or the number of injuries or deaths is not specified or unclear the system will report <b>n.d.</b><br>
+For all the news that have a number of injuries or deaths different from <b>n.d.</b>, the type of the site where the accident happened will be reported.<br>
 <!-- This loops through the paginated posts -->
 {% for post in site.posts %}
   {% assign start_date = site.data.dates.start_date %}
