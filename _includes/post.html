@@ -16,28 +16,26 @@
   </p>
   
   {% assign consequences = false %}
-
-  {% if post.accident == "1" and post.dead and post.dead != "" post.dead != nil %}
-    <p class="author">
-      {% if post.dead != "0" %}
-        {% assign consequences = true %}
-        <span style="color: red;">dead: <b>{{ post.dead }}</b></span>
-      {% else %}
-        <span>dead: <b>n.d.</b></span>
-      {% endif %}
-    </p>
-  {% endif %}
   
-  {% if post.accident == "1" and post.injured and post.injured != "" post.injured != nil %}
-    <p class="author">
-      {% if post.injured != "0" %} 
-        {% assign consequences = true %}
-        <span style="color: red;">injured: <b>{{ post.injured }}</b></span>
-      {% else %}
-        <span>injured: <b>n.d.</b></span>
-      {% endif %}
-    </p>
-  {% endif %}
+  <p class="author">
+    {% if post.accident == "1" and post.dead and post.dead != "" post.dead != nil %}
+        {% if post.dead != "0" %}
+          {% assign consequences = true %}
+          <span style="color: red;">dead: <b>{{ post.dead }}</b></span>
+        {% else %}
+          <span>dead: <b>n.d.</b></span>
+        {% endif %}
+    {% endif %}
+
+    {% if post.accident == "1" and post.injured and post.injured != "" post.injured != nil %}
+        {% if post.injured != "0" %} 
+          {% assign consequences = true %}
+          <span style="color: red;">injured: <b>{{ post.injured }}</b></span>
+        {% else %}
+          <span>injured: <b>n.d.</b></span>
+        {% endif %}
+    {% endif %}
+  </p>
 
   {% if consequences and post.where and post.where != "" post.where != nil %}
     <p class="author">
