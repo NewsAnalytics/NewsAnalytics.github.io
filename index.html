@@ -51,8 +51,6 @@ var injureds = {};
     counts[news[i]["date"]]   = 1 + (counts[news[i]["date"]] || 0);
     // deads[news[i]["date"]]    = news[i]["dead"] + (deads[news[i]["date"]] || 0);
     // injureds[news[i]["date"]] = news[i]["injured"] + (injureds[news[i]["date"]] || 0);
-    deads[news[i]["date"]]    = 1 + (deads[news[i]["date"]] || 0);
-    injureds[news[i]["date"]]    = 1 + (injureds[news[i]["date"]] || 0);
 }
 
 
@@ -99,8 +97,8 @@ function create_graph(data, div_id) {
  
  
 create_graph(counts, "counter_news");
-create_graph(deads, "counter_deads");
-create_graph(injureds, "counter_injuries");
+//create_graph(deads, "counter_deads");
+//create_graph(injureds, "counter_injuries");
  
 </script>
 
