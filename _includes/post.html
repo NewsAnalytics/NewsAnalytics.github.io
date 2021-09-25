@@ -31,8 +31,10 @@
           <span>dead: <b>n.d.</b></span>
         {% endif %}
     {% endif %}
-  </p>
-  <p class="author">
+  {% if consequences %}
+    </p>
+    <p class="author">
+  {% endif %}  
     {% if post.accident == "1" and post.injured and post.injured != "" and post.injured != nil %}
         {% if post.injured != "0" %}
           <span style="color: red;">injured: <b>{{ post.injured }}</b></span>
