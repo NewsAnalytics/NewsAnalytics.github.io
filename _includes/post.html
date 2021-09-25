@@ -1,16 +1,17 @@
-  <h3 id="{{ post.file }}">
+<span class="date"><span class="date_string">{{ post.date | date_to_xmlschema  }}</span></span>  
+<h3 id="{{ post.file }}">
      {% if post.accident == "1" %}
       <!-- [WARNING] -->
      {% endif %}
-     {{ post.date | date_to_xmlschema  }}
      <a href="{{ post.link }}">
       {{ post.title }}
      </a>
   </h3>
-
+  <!--
   <p class="author">
     <span class="date">publishing date: <span class="date_string">{{ post.date | date_to_xmlschema  }}</span>
   </p>
+  -->
   <p class="author">
     <span>source: <a href="{{ post.feed_website }}">{{ post.feed_name }}</a> </span>
   </p>
