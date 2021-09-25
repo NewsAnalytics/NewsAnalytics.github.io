@@ -15,14 +15,13 @@
     <span>source: <a href="{{ post.feed_website }}">{{ post.feed_name }}</a> </span>
   </p>
   
-  {% assign dead_consequences = false %}
-  {% assign injured_consequences = false %}
+  {% assign consequences = false %}
 
   {% if post.accident == "1" and post.dead and post.dead != "" and post.dead != nil and post.dead != "0" %} 
-    {% assign dead_consequences = true %}
+    {% assign consequences = true %}
   {% endif %}
   {% if post.accident == "1" and post.injured and post.injured != "" and post.injured != nil and post.injured != "0" %} 
-    {% assign injured_consequences = true %}
+    {% assign consequences = true %}
   {% endif %}
   
   <p class="author">
@@ -33,7 +32,7 @@
           <span>dead: <b>n.d.</b></span>
         {% endif %}
     {% endif %}
-  {% if dead_consequences or injured_consequences %}
+  {% if consequences %}
     </p>
     <p class="author">
   {% endif %}  
