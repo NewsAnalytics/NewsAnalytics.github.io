@@ -1,8 +1,8 @@
-<span class="date"><span class="date_string">{{ post.date | date_to_xmlschema  }}</span></span>  
 <h3 id="{{ post.file }}">
      {% if post.accident == "1" %}
       <!-- [WARNING] -->
      {% endif %}
+     <span class="date"><span class="date_string">{{ post.date | date_to_xmlschema  }}</span></span>  
      <a href="{{ post.link }}">
       {{ post.title }}
      </a>
