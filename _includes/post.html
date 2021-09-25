@@ -16,11 +16,16 @@
   </p>
   
   {% assign consequences = false %}
-  
+  {% if post.accident == "1" and post.dead and post.dead != "" and post.dead != nil and post.dead != "0" %} 
+    {% assign consequences = true %}
+  {% endif %}
+  {% if post.accident == "1" and post.injured and post.injured != "" and post.injured != nil and post.injured != "0" %} 
+    {% assign consequences = true %}
+  {% endif %}
+
   <p class="author">
-    {% if post.accident == "1" and post.dead and post.dead != "" post.dead != nil %}
+    {% if post.accident == "1" and post.dead and post.dead != "" and post.dead != nil %}
         {% if post.dead != "0" %}
-          {% assign consequences = true %}
           <span style="color: red;">dead: <b>{{ post.dead }}</b></span>
         {% else %}
           <span>dead: <b>n.d.</b></span>
@@ -28,9 +33,8 @@
     {% endif %}
   </p>
   <p class="author">
-    {% if post.accident == "1" and post.injured and post.injured != "" post.injured != nil %}
-        {% if post.injured != "0" %} 
-          {% assign consequences = true %}
+    {% if post.accident == "1" and post.injured and post.injured != "" and post.injured != nil %}
+        {% if post.injured != "0" %}
           <span style="color: red;">injured: <b>{{ post.injured }}</b></span>
         {% else %}
           <span>injured: <b>n.d.</b></span>
