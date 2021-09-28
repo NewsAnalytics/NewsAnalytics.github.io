@@ -68,9 +68,9 @@
   {% if consequences and post.causes and post.causes != "" post.causes != nil %}
     <p class="author">
       {% if post.causes != "unknown" %} 
-        <!-- <span style="color: red;">causes: <b>{{ post.causes }}</b></span> -->
+        <span style="color: red;">causes: <b>{{ post.causes }}</b></span>
       {% else %}
-        <!-- <span>causes: <b>n.d.</b></span> -->
+        <span>causes: <b>n.d.</b></span>
       {% endif %}
     </p>
   {% endif %}
