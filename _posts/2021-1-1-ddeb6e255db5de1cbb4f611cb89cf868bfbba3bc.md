@@ -1,0 +1,17 @@
+---
+"title": "Solutions emerge from Gregory Crinum incident - SafeToWork"
+"date": "2021-9-27 5:20:42"
+"feed_name": "GOOGLENEWSMINING"
+"feed_website": "https://news.google.com/search?q=mining%2Bincident&hl=en-US&gl=US&ceid=US:en"
+"feed_rss": "https://news.google.com/rss/search?q=mining%2Bincident&hl=en-US&gl=US&ceid=US:en"
+"link": "https://safetowork.com.au/solutions-emerge-from-gregory-crinum-incident/"
+"source": "{'href': 'https://safetowork.com.au', 'title': 'SafeToWork'}"
+"file": "_posts/2021-1-1-ddeb6e255db5de1cbb4f611cb89cf868bfbba3bc.md"
+"accident": "1"
+"drilling": "0"
+"dead": "0"
+"injured": "0"
+"arrested": "0"
+"where": "unknown site"
+"place": "unknown place"
+---
