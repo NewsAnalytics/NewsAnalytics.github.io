@@ -13,5 +13,6 @@
 "injured": "0"
 "arrested": "0"
 "where": "unknown site"
+"causes": "crush"
 "place": "unknown place"
 ---
