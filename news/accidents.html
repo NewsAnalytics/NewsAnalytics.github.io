@@ -12,7 +12,7 @@ layout: default
 <p><center>Start date: {{ site.data.dates.start_date }} (UTC)</center></p>
 <br>
 <p><center>If no injuries or deaths happened or the number of injuries or deaths is not specified or unclear the system will report <b>n.d.</b></center></p>
-<p><center>For all the news that have a number of injuries or deaths different from <b>n.d.</b>, the causes and the type of the site where the accident happened will be reported (construction, industrial, manufacturing and mining site) if available (n.d. otherwise).</center></p>
+<p><center>For all the news that have a number of injuries or deaths different from <b>n.d.</b>, the causes and the type of the site where the accident happened, if available, will be reported (construction, industrial, manufacturing and mining site), otherwise n.d.</center></p>
 <hr>
 <!-- This loops through the paginated posts -->
 {% for post in site.posts %}
