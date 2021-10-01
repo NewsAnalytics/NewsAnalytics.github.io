@@ -4,6 +4,6 @@
 "rss": "https://www.iadc.org/feed/"
 "embedded": "0"
 "etag": "'a4b58b4e7dace1b0dfdf346d8954bef5'"
-"last_modified": "Thu, 30 Sep 2021 20:51:11 GMT"
-"last_poll": "2021-10-01 00:16:20.083334+00:00"
+"last_modified": "Fri, 01 Oct 2021 00:12:00 GMT"
+"last_poll": "2021-10-01 01:20:12.964658+00:00"
 ---
