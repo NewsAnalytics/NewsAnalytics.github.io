@@ -22,7 +22,7 @@ layout: default
   {% capture min_date_s %}{{ site.time | date: "%s" | minus : last_days_s }}{% endcapture %}
   
 
-  {% if post.accident == "1" and post.date > start_date and post_date_s > min_date_s %}
+  {% if post.date > start_date and post_date_s > min_date_s %}
      {% include post.html %}
      <hr>
   {% endif %}
