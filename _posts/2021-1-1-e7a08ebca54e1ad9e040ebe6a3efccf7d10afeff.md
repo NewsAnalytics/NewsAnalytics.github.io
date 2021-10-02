@@ -1,0 +1,18 @@
+---
+"title": "Smuggled explosives keep illegal mining syndicates in business - IPPmedia"
+"date": "2021-10-2 5:59:36"
+"feed_name": "GOOGLENEWSMINING"
+"feed_website": "https://news.google.com/search?q=mining%2Bincident&hl=en-US&gl=US&ceid=US:en"
+"feed_rss": "https://news.google.com/rss/search?q=mining%2Bincident&hl=en-US&gl=US&ceid=US:en"
+"link": "https://www.ippmedia.com/en/features/smuggled-explosives-keep-illegal-mining-syndicates-business"
+"source": "{'href': 'https://www.ippmedia.com', 'title': 'IPPmedia'}"
+"file": "_posts/2021-1-1-e7a08ebca54e1ad9e040ebe6a3efccf7d10afeff.md"
+"accident": "0"
+"drilling": "0"
+"dead": "0"
+"injured": "0"
+"arrested": "0"
+"where": "unknown site"
+"causes": "unknown"
+"place": "unknown place"
+---
