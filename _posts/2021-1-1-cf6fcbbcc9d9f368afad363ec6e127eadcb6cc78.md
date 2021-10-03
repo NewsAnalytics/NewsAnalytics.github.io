@@ -1,0 +1,18 @@
+---
+"title": "Milan plane crash: 'No survivors' in accident in San Donato Milanese - Sky News"
+"date": "2021-10-3 14:37:49"
+"feed_name": "GOOGLENEWSPLANE"
+"feed_website": "https://news.google.com/search?q=plane%20%2B%20accident&hl=en-US&gl=US&ceid=US%3Aen"
+"feed_rss": "https://news.google.com/rss/search?q=plane%20%2B%20accident&hl=en-US&gl=US&ceid=US%3Aen"
+"link": "https://news.sky.com/video/several-killed-in-milan-plane-crash-including-everyone-on-board-12425001"
+"source": "{'href': 'https://news.sky.com', 'title': 'Sky News'}"
+"file": "_posts/2021-1-1-cf6fcbbcc9d9f368afad363ec6e127eadcb6cc78.md"
+"accident": "0"
+"drilling": "0"
+"dead": "0"
+"injured": "0"
+"arrested": "0"
+"place": "unknown place"
+"where": "unknown site"
+"causes": "unknown"
+---
