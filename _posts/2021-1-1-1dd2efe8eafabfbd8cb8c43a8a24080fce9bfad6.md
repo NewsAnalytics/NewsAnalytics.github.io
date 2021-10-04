@@ -12,7 +12,8 @@
 "dead": "1"
 "injured": "0"
 "arrested": "0"
-"where": "unknown site"
+"where": "construction site"
 "causes": "crush"
-"place": "unknown place"
+"place": "new jersey"
+"place_uri": "http://en.wikipedia.org/wiki/New_Jersey"
 ---
