@@ -74,7 +74,7 @@
 
   {% if consequences and post.causes and post.causes != "" post.causes != nil %}
     <p class="author">
-      {% if post.causes != "unknown" %} 
+      {% if post.causes != "unknown" and post.causes != "incident" and post.causes != "accident" %} 
         <span style="color: red;">causes/by: <b>{{ post.causes }}</b></span>
       {% else %}
         <span>causes/by: <b>n.d.</b></span>
