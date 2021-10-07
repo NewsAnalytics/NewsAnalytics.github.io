@@ -4,6 +4,6 @@
 "rss": "https://www.oedigital.com/technology/safety-security?format=feed"
 "embedded": "0"
 "etag": "None"
-"last_modified": "Wed, 06 Oct 2021 23:16:31 GMT"
-"last_poll": "2021-10-06 23:16:31.650982+00:00"
+"last_modified": "Thu, 07 Oct 2021 00:16:31 GMT"
+"last_poll": "2021-10-07 00:16:31.599791+00:00"
 ---
