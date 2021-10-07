@@ -3,7 +3,7 @@
 "website": "https://www.iadc.org/"
 "rss": "https://www.iadc.org/feed/"
 "embedded": "0"
-"etag": "'bbb8feaf82b36a5f309da6c27bd3e40c'"
+"etag": "'ea761144b974596dd8d8e6fd68c8d3c1'"
 "last_modified": "Thu, 07 Oct 2021 13:12:38 GMT"
-"last_poll": "2021-10-07 13:16:21.718163+00:00"
+"last_poll": "2021-10-07 13:46:21.501315+00:00"
 ---
