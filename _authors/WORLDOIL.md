@@ -3,7 +3,7 @@
 "website": "https://www.worldoil.com/"
 "rss": "https://www.worldoil.com/rss?feed=news"
 "embedded": "0"
-"etag": "None"
-"last_modified": "None"
-"last_poll": "2021-10-07 14:46:26.228986+00:00"
+"etag": "'0128481447ad71:0'"
+"last_modified": "Fri, 16 Jul 2021 13:14:28 GMT"
+"last_poll": "2021-10-07 15:16:22.423944+00:00"
 ---
